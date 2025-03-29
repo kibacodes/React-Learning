@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Namaste React</title>
+  </head>
+  <body>
+    <div id="root">
+        <!-- <h1>Hello World!</h1> -->
+    </div>
+
+    <!-- <script>
+        const root = document.getElementById("root");
+        const h1 = document.createElement("h1");
+
+        h1.innerHTML = "Hello World from JavaScript!";
+        root.appendChild(h1);
+    </script> -->
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react@18/umd/react.development.js"
+    ></script>
+    <!-- This file i.e. react.development.js contains React Code which is plain JS -->
+
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"
+    ></script>
+    <!-- This file i.e. react-dom.development.js is useful for DOM operations or use to modify the DOM -->
+
+    <script>
+        const heading = React.createElement("h1", {}, "Hello World from React!");
+
+        const root = ReactDOM.createRoot(document.getElementById("root"));
+
+        root.render(heading);
+    </script>
+  </body>
+</html>
