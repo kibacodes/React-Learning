@@ -1,0 +1,23 @@
+{
+  "name": "namaste-react",
+  "version": "1.0.0",
+  "description": "This is Namaste React by Prashant Chakraborty",
+  "main": "App.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kibacodes/React-Learning.git"
+  },
+  "keywords": [],
+  "author": "Prashant Chakraborty",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kibacodes/React-Learning/issues"
+  },
+  "homepage": "https://github.com/kibacodes/React-Learning#readme",
+  "devDependencies": {
+    "parcel": "^2.14.4"
+  }
+}
