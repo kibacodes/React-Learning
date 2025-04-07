@@ -44,3 +44,20 @@
   - HTTPs
   - Tree Shaking - remove unused code
   - Different dev and prod bundles
+
+
+// React Functional Component
+// const HeadingComponent = () => {
+//     return <h1 className="heading">Namaste React Functional Component</h1>;
+// };
+// const HeadingComponent2 = () => <h1 className="heading">Namaste React Functional Component</h1>;
+
+// React.createElement => Object => HTMLElement(render)
+
+// const heading = React.createElement("h1", { id: "heading" }, "Namaste React 🚀");
+
+//JSX - (transpiles before it reaches the JS Engine) - PARCEL - Babel
+
+//JSX => Babel transpiles it to React.createElement => ReactElement-JS Object => HTMLElement(render)
+
+// React Element
