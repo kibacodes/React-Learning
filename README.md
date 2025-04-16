@@ -61,3 +61,38 @@
 //JSX => Babel transpiles it to React.createElement => ReactElement-JS Object => HTMLElement(render)
 
 // React Element
+
+
+// React App Structure - #Namaste Food
+
+/*
+ * Header
+ * - Logo
+ * - Nav Items
+ * Body
+ * - Search
+ * - RestaurantContainer
+ *    - RestaurantCard
+ *       - Image
+ *       - Name of Restaurant, Star Ratings, cuisine, delivery time
+ * Footer
+ * - Copyright
+ * - Links
+ * - Address
+ * - Contact
+ */
+
+// worst option <<<< good option <<<<< best option
+// not using keys (not acceptable) <<<< index as key <<<<< unique id as key (best practice)
+
+Two types of exports:
+
+- Default Export/Import
+
+export default <name of variable/Component>
+import Component/variable from "path"
+
+- Named Export/Import
+
+export const Component/Variable
+import {Component/Variable} from "path"
