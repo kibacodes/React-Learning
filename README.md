@@ -27,23 +27,23 @@
 
   # Parcel
 
-  - Dev Build
-  - Local Server
-  - HMR = Hot Module Replacement
-  - File Watching Algorithm - written in C++
-  - Caching - Faster Builds
-  - Image Optimization (Loading Images aka most expensive operation)
-  - Minification
-  - Bundling
-  - Compress
-  - Consistent/ Content Hashing
-  - Code Splitting
-  - Differential Bundling - support older browsers
-  - Diagnostic
-  - Error Handling
-  - HTTPs
-  - Tree Shaking - remove unused code
-  - Different dev and prod bundles
+    - Dev Build
+    - Local Server
+    - HMR = Hot Module Replacement
+    - File Watching Algorithm - written in C++
+    - Caching - Faster Builds
+    - Image Optimization (Loading Images aka most expensive operation)
+    - Minification
+    - Bundling
+    - Compress
+    - Consistent/ Content Hashing
+    - Code Splitting
+    - Differential Bundling - support older browsers
+    - Diagnostic
+    - Error Handling
+    - HTTPs
+    - Tree Shaking - remove unused code
+    - Different dev and prod bundles
 
 
 // React Functional Component
@@ -96,3 +96,25 @@ import Component/variable from "path"
 
 export const Component/Variable
 import {Component/Variable} from "path"
+
+# React Hooks
+  (Normal JS utility functions)
+  - useState() - Superpowerful State Variables in React
+  - useEffect()
+
+  - State Variables are in sync with the UI Layer of the React App and as soon as any changes take place in it, the UI refreshes and also changes alongside it automatically. This is what we call Render. 
+
+  - Easily put, whenever a state variable CHANGES, React RE-RENDERS that component. Hence, keeping UI Layer and Data Layer in sync and making DOM operations faster. (a challenge which is faced when using vanilla JavaScript and is solved by React and other frameworks like Angular and Vue).
+
+  Why is React fast? Efficient DOM manipulation done via Virtual DOM aka JavaScript representation of the HTML of a website. React can find out difference between old and new UI changes and update the UI quickly and efficiently. Hence, this is why it is fast.
+
+  - Virtual DOM, React Fiber and Reconciliation (**)
+
+  - const [listOfRestaurants, setListOfRestaurants] = useState("")
+      is the same thing as 
+    const arr = useState([]);
+    const [listOfRestaurants, setListOfRestaurants] = arr;
+      is the same thing as
+    const listOfRestaurants = arr[0];
+    const setListOfRestaurants = arr[1];
+    AKA Array Destructuring in JavaScript.
