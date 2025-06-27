@@ -97,6 +97,9 @@ import Component/variable from "path"
 export const Component/Variable
 import {Component/Variable} from "path"
 
+Xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+
+
 # React Hooks
   (Normal JS utility functions)
   - useState() - Superpowerful State Variables in React
@@ -118,3 +121,11 @@ import {Component/Variable} from "path"
     const listOfRestaurants = arr[0];
     const setListOfRestaurants = arr[1];
     AKA Array Destructuring in JavaScript.
+
+  - useEffect's callback function will render after the component is done rendering. Example: In Body.js, we have a useEffect and it has a callback function, it will render only after the Body Component is done with it's render cycle or rendering.
+
+  -  useEffect(() => {
+      console.log("useEffect Called");
+    }, []);
+
+    It takes in 2 parameters: A callback function and a dependency array.
