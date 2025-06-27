@@ -11,15 +11,19 @@ const Body = () => {
   }, []);
 
   const fetchData = async () => {
-    const data = await fetch(
-      "https://swiggy-api-4c740.web.app/swiggy-api.json"
-    );
-    const json = await data.json();
-    console.log(json);
-    setListOfRestaurants(
-      json?.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle
-        ?.restaurants || []
-    );
+    try {
+      const data = await fetch(
+        "https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.63270&lng=77.21980&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING"
+      );
+      const json = await data.json();
+      const restaurantsData = json?.data?.cards?.find((item) =>
+        console.log(item?.card?.card?.id?.includes("restaurant_grid"))
+      )?.card?.card?.gridElements?.infoWithStyle?.restaurants;
+
+      setListOfRestaurants(restaurantsData);
+    } catch (err) {
+      console.log(err.message);
+    }
   };
 
   return (
@@ -28,8 +32,8 @@ const Body = () => {
         <button
           className="filter-btn"
           onClick={() => {
-            const filteredList = listOfRestaurants.filter(
-              (res) => res.info.avgRating > 4
+            const filteredList = listOfRestaurants?.filter(
+              (res) => res?.info?.avgRating > 4
             );
             setListOfRestaurants(filteredList);
           }}
@@ -38,8 +42,8 @@ const Body = () => {
         </button>
       </div>
       <div className="res-container">
-        {listOfRestaurants.map((restaurant) => (
-          <RestaurantCard key={restaurant.info.id} resData={restaurant} />
+        {listOfRestaurants?.map((restaurant) => (
+          <RestaurantCard key={restaurant?.info?.id} resData={restaurant?.info} />
         ))}
       </div>
     </div>
